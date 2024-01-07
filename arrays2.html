@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Arrays1</title>
+</head>
+
+<body>
+    <script>
+        const arr = []
+        arr.push(8)
+        arr.push(-1)
+        arr.push(9)
+        arr.push(-7)
+        arr.push(-13.5)
+
+        function get_positive(arr) {
+            const result = []
+            for (const number of arr) {
+                if (number <= 0) {
+                    continue
+                }
+                result.push(number)
+            }
+            return result
+        }
+
+        const only_positives = get_positive(arr)
+        console.log(get_positive(arr));
+
+        ///////////////////////////////////////////////
+        function filter_func(number) {
+            // if (number > 0)
+            //     return true
+            // else
+            //     return false
+            return number > 0 
+        }
+        // filter:
+        // =======
+        // const result = []
+        // for (const number of arr) {
+        //     if (filter_func(number)) {
+        //         result.push(number)
+        //     }
+        // }
+
+        console.log('using filter !!! harrray !');
+        const use_filter = arr.filter(filter_func)
+        console.log(use_filter);
+
+        console.log('using filter shorter !!');
+        // const use_filter_shorter = arr.filter(function filter_func(number) {
+        //     return number > 0 
+        // })
+        // const use_filter_shorter = arr.filter(function (number) {
+        //     return number > 0 
+        // })
+        // const use_filter_shorter = arr.filter( (number) => {
+        //     return number > 0 
+        // })
+
+        const use_filter_shorter = arr.filter(number => number > 0)
+        const negatives = arr.filter(number => number < 0)
+
+        // array of numbers, get all numbers greater than 100 using filter
+        // [6, 200, 300, 800, 1, 99] ==> [200, 300, 800]
+
+        // array of numbers, get all even numbers using filter
+        // [7, 200, 300, 800, 1, 99] ==> [200, 300, 800]
+
+        // array of numbers, get all odd numbers using filter
+        // [7, 200, 300, 800, 1, 99] ==> [7, 1, 99]
+
+        // **array of strings, get all words which have 3 or more letters
+        // ["hello", "js", "am", "is", "are", "great"] ==> ["hello", "are", "great"]
+
+
+
+        console.log(use_filter);
+
+
+
+    </script>
+
+</body>
+
+</html>
