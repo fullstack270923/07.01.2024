@@ -4,7 +4,7 @@
     <title>Arrays1</title>
 </head>
 <body>
-    <p>GRADE : <input type="number" id="grade"></p>
+    <p>GRADE : <input type="number" id="grade_txt"></p>
     <button id="btn_add_right_side" onclick="add_grade_r()">ADD RIGHT SIDE</button>
     <button id="btn_rem_right_side" onclick="remove_grade_r()">REMOVE FROM RIGHT SIDE</button>
     <button id="btn_add_left_side" onclick="add_grade_l()">ADD LEFT SIDE</button>
@@ -15,9 +15,22 @@
     <p id="result">[]</p>
     <script>
 
-        const arr = [ ]
-        // use add_event_listener 
+        const grades = [ ]
+        const grade_txt = document.getElementById('grade_txt')
 
+        // 1
+        function add_grade_r() {
+            const grade = parseInt(grade_txt.value)
+            grades.push(grade)
+            document.getElementById('result').innerHTML = grades
+        }
+
+        // or ...
+        // document.getElementById(btn_add_right_side, () => {
+        //     const grade = parseInt(grade_txt.value)
+        //     grades.push(grade)
+        //     document.getElementById('result').innerHTML = grades            
+        // })
     </script>
 </body>
 </html>
