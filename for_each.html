@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>for each</title>
+</head>
+
+<body>
+    <script>
+
+        const cards = ['K.png', 'J.png', 'A.png']
+        const numbers = [6, 87, 9, 1001, -1, 0]
+
+        for (let i = 0; i < cards.length; i++) {
+            document.write(`${cards[i]} <br />`)            
+        }
+        
+        for (const card of cards) {
+            console.log(cards)
+        }
+
+        for (let i = 0; i < numbers.length; i++) {
+            document.write(`${numbers[i]} <br />`)            
+        }        
+
+    </script>
+</body>
+
+</html>
