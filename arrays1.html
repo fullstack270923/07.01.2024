@@ -22,7 +22,8 @@
         function add_grade_r() {
             const grade = parseInt(grade_txt.value)
             grades.push(grade)
-            document.getElementById('result').innerHTML = grades
+            document.getElementById('result').innerHTML = 
+                `[ ${grades} ]`
         }
 
         // or ...
